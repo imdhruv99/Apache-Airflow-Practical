@@ -15,6 +15,7 @@ with DAG(
     schedule_interval=timedelta(days=1),  # Run daily
     start_date=datetime(2023, 1, 1),
     catchup=False,
+    tags=["simple_first_dag"],
 ) as dag:
 
     print_hello_world = BashOperator(

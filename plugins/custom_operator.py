@@ -11,7 +11,7 @@ class HttpGetOperator(BaseOperator):
     def execute(self, context):
         response = requests.get(self.endpoint)
         if response.status_code == 200:
-            self.log.info(f"Succsess: {response.status_code}")
+            self.log.info(f"Success: {response.status_code}")
             return response.json()
         else:
             self.log.error(f"Failed: {response.status_code}")
